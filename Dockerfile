@@ -6,3 +6,5 @@ ENV TRANSMISSION_DIR /var/lib/transmission
 ENV TRANSMISSION_INCOMPLETE /var/lib/transmission/temps
 ENV TRANSMISSION_USER transmission
 ENV TRANSMISSION_PASSWORD transmission
+
+CMD transmission-daemon --username "$TRANSMISSION_USER" --password "$TRANSMISSION_PASSWORD" --incomplete-dir "$TRANSMISSION_INCOMPLETE" --download-dir "$TRANSMISSION_DIR"
