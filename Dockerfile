@@ -9,4 +9,4 @@ ENV TRANSMISSION_USER transmission
 ENV TRANSMISSION_PASSWORD transmission
 EXPOSE 9091
 
-CMD transmission-daemon -f --no-portmap --log-error --config-dir /etc/transmission-daemon/ --username "$TRANSMISSION_USER" --password "$TRANSMISSION_PASSWORD"  --download-dir "$TRANSMISSION_DIR" --incomplete-dir "$TRANSMISSION_INCOMPLETE" --bind-address-ipv4 "0.0.0.0" --auth
+CMD exec transmission-daemon -f --no-portmap --log-error --config-dir /etc/transmission-daemon/ --username "$TRANSMISSION_USER" --password "$TRANSMISSION_PASSWORD"  --download-dir "$TRANSMISSION_DIR" --incomplete-dir "$TRANSMISSION_INCOMPLETE" --bind-address-ipv4 "0.0.0.0" --auth
