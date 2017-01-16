@@ -2,6 +2,7 @@ FROM alpine:latest
 MAINTAINER Ludovic Logiou <ludovic.logiou@gmail.com>
 RUN apk update && apk upgrade
 RUN apk add transmission-daemon curl
+RUN curl -O https://raw.githubusercontent.com/ronggang/transmission-web-control/master/release/tr-control-easy-install.sh && /bin/sh /tr-control-easy-install.sh
 ADD settings.json /etc/transmission-daemon/settings.json
 ENV TRANSMISSION_DIR /var/lib/transmission
 ENV TRANSMISSION_INCOMPLETE /var/lib/transmission/temps
