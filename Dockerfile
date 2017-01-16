@@ -1,7 +1,7 @@
 FROM alpine:latest
 MAINTAINER Ludovic Logiou <ludovic.logiou@gmail.com>
 RUN apk update && apk upgrade
-RUN apk add transmission-daemon
+RUN apk add transmission-daemon curl
 ADD settings.json /etc/transmission-daemon/settings.json
 ENV TRANSMISSION_DIR /var/lib/transmission
 ENV TRANSMISSION_INCOMPLETE /var/lib/transmission/temps
