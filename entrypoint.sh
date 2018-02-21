@@ -2,6 +2,7 @@
 TRANSMISSION_USER="${TRANSMISSION_USER:-"transmission"}"
 TRANSMISSION_PASSWORD="${TRANSMISSION_PASSWORD:-"transmission"}"
 TRANSMISSION_DIR="${TRANSMISSION_DIR:-"/var/lib/transmission"}"
+TRANSMISSION_INCOMPLETE="${TRANSMISSION_INCOMPLETE:-"/var/lib/transmission/temps"}"
 if [ $TRANSMISSION_PASSWORD == "transmission" ]; then
 	echo "Warning you use default password, you should change it"
 fi
